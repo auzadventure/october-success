@@ -1,0 +1,134 @@
+1546065826a:1:{s:11:"product.htm";a:10:{s:8:"fileName";s:11:"product.htm";s:7:"content";s:1167:"title = "Product"
+url = "/product/:slug"
+layout = "default"
+is_hidden = 0
+
+[ProductPage]
+slug = "{{ :slug }}"
+slug_required = 1
+smart_url_check = 0
+
+==
+
+{# Get product item #}
+{% set Product = ProductPage.get() %}
+
+<div class="container">
+
+<h1>Selection</h1>
+
+<a href="{{ 'home'|page }} " class='btn btn-default'> 
+	<i class='icon-home'></i>Home
+</a>
+
+
+<div data-id="{{ Product.id }}">
+
+    <h2>{{ Product.name }}</h2>
+
+	
+	<div class="row">
+	<div class="col-md-3" style='padding:20px'>
+		{% if Product.preview_image is not empty %}
+                    <img src="{{ Product.preview_image.path }}" 
+					class='product-image-large'
+					title="{{ Product.preview_image.title }}" 
+					alt="{{ Product.preview_image.description }}">
+         {% endif %}	
+	</div>	
+	
+	<div class="col-md-9">
+	
+	<h5>Description</h5>
+	<p> {{ Product.description | raw }} </p>
+		
+		
+	 <h4>Price</h4>
+	 
+
+		{% set Offer = Product.offer.first() %}
+		
+
+		{% if Offer.isNotEmpty()%}  
+				<h3>Price: ${{ Offer.price }} {{ Offer.currency }}</h3>
+
+				
+				
+		{% endif %}			
+	
+		
+
+	</div>
+	
+	</div>
+
+	
+
+</div>
+
+
+
+
+</div>
+
+
+";s:5:"mtime";i:1546048826;s:6:"markup";s:996:"{# Get product item #}
+{% set Product = ProductPage.get() %}
+
+<div class="container">
+
+<h1>Selection</h1>
+
+<a href="{{ 'home'|page }} " class='btn btn-default'> 
+	<i class='icon-home'></i>Home
+</a>
+
+
+<div data-id="{{ Product.id }}">
+
+    <h2>{{ Product.name }}</h2>
+
+	
+	<div class="row">
+	<div class="col-md-3" style='padding:20px'>
+		{% if Product.preview_image is not empty %}
+                    <img src="{{ Product.preview_image.path }}" 
+					class='product-image-large'
+					title="{{ Product.preview_image.title }}" 
+					alt="{{ Product.preview_image.description }}">
+         {% endif %}	
+	</div>	
+	
+	<div class="col-md-9">
+	
+	<h5>Description</h5>
+	<p> {{ Product.description | raw }} </p>
+		
+		
+	 <h4>Price</h4>
+	 
+
+		{% set Offer = Product.offer.first() %}
+		
+
+		{% if Offer.isNotEmpty()%}  
+				<h3>Price: ${{ Offer.price }} {{ Offer.currency }}</h3>
+
+				
+				
+		{% endif %}			
+	
+		
+
+	</div>
+	
+	</div>
+
+	
+
+</div>
+
+
+
+
+</div>";s:4:"code";N;s:5:"title";s:7:"Product";s:3:"url";s:14:"/product/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"ProductPage";a:3:{s:4:"slug";s:11:"{{ :slug }}";s:13:"slug_required";s:1:"1";s:15:"smart_url_check";s:1:"0";}}}

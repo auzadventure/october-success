@@ -1,0 +1,16 @@
+<div class="">
+<h1>Weather</h1>
+
+{{ d(weatherInfo) }}
+
+<ul>
+{% for row in weatherInfo %}
+	<li>{{ row.name | e}} | {{ row.email}}
+	
+	</li>
+{% endfor %}
+</ul>
+
+
+{{ units }}
+</div>

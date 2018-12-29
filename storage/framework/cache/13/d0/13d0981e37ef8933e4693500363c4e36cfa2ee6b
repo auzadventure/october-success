@@ -1,0 +1,165 @@
+1546065989a:1:{s:8:"home.htm";a:10:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1953:"title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[ProductList]
+sorting = "no"
+==
+<div class="container">
+
+<div class="logo" style='padding: 50px 0 0'>
+	<img src="{{'home/successbooks_logo.png'|media}}" alt="" style='width:500px'>
+	<h4>The No.1 place for business self improvement</h4>
+	<hr>
+</div>
+
+<img src="{{'home/slider_successstartshere.jpg'|media }}" style='margin-bottom:10px' />
+
+<hr />
+
+<h2>Get Serious With Success</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<p>Walk away from the 97% and join the 3% of people achieving success. This is the networking and 
+success book club that introduces you to the books that make a difference.
+</p>
+
+<p>We introduce the greatest and the best books to expand you mind</p>
+
+</div>
+<div class="col-md-6">
+
+
+<blockquote style='background-color:#efefef'>Measure a serious student of success by the books in his library that he reads.
+		<small>- Jim Rohn</small>
+</blockquote>
+
+</div>
+
+
+</div>
+
+
+
+<h2>Read Our Latest</h2>
+	
+	
+<div class="row">
+
+	{% set Products = ProductList.make().sort(ProductList.getSorting()).active().category(3) %}
+	
+	{% for Product in Products %}
+	
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		<div class="panel-body" data-id="{{ Product.id }}">
+			<a href="product/{{ Product.slug }}">
+                <h4>{{ Product.name }}</h4>
+			 </a>
+			 <div class="" style='text-align:center'>
+			 {% if Product.preview_image is not empty %}
+			 
+				<a href="product/{{ Product.slug }}">
+                    <img src="{{ Product.preview_image.path }}" 
+					style='padding: 10px; width:60%'
+					title="{{ Product.preview_image.title }}" alt="{{ Product.preview_image.description }}">
+				</a> 
+			 {% endif %}			 
+			 </div>
+
+			 <p style='padding: 5px 10px'>{{ str_limit(Product.preview_text,100) }}</p>
+			 
+ 
+		</div>
+		
+		</div>
+	</div>
+	{% endfor %}
+	
+	</div>
+
+	
+
+</div>";s:5:"mtime";i:1546065347;s:6:"markup";s:1854:"<div class="container">
+
+<div class="logo" style='padding: 50px 0 0'>
+	<img src="{{'home/successbooks_logo.png'|media}}" alt="" style='width:500px'>
+	<h4>The No.1 place for business self improvement</h4>
+	<hr>
+</div>
+
+<img src="{{'home/slider_successstartshere.jpg'|media }}" style='margin-bottom:10px' />
+
+<hr />
+
+<h2>Get Serious With Success</h2>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<p>Walk away from the 97% and join the 3% of people achieving success. This is the networking and 
+success book club that introduces you to the books that make a difference.
+</p>
+
+<p>We introduce the greatest and the best books to expand you mind</p>
+
+</div>
+<div class="col-md-6">
+
+
+<blockquote style='background-color:#efefef'>Measure a serious student of success by the books in his library that he reads.
+		<small>- Jim Rohn</small>
+</blockquote>
+
+</div>
+
+
+</div>
+
+
+
+<h2>Read Our Latest</h2>
+	
+	
+<div class="row">
+
+	{% set Products = ProductList.make().sort(ProductList.getSorting()).active().category(3) %}
+	
+	{% for Product in Products %}
+	
+	<div class="col-md-3">
+		<div class="panel panel-default">
+		<div class="panel-body" data-id="{{ Product.id }}">
+			<a href="product/{{ Product.slug }}">
+                <h4>{{ Product.name }}</h4>
+			 </a>
+			 <div class="" style='text-align:center'>
+			 {% if Product.preview_image is not empty %}
+			 
+				<a href="product/{{ Product.slug }}">
+                    <img src="{{ Product.preview_image.path }}" 
+					style='padding: 10px; width:60%'
+					title="{{ Product.preview_image.title }}" alt="{{ Product.preview_image.description }}">
+				</a> 
+			 {% endif %}			 
+			 </div>
+
+			 <p style='padding: 5px 10px'>{{ str_limit(Product.preview_text,100) }}</p>
+			 
+ 
+		</div>
+		
+		</div>
+	</div>
+	{% endfor %}
+	
+	</div>
+
+	
+
+</div>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"ProductList";a:1:{s:7:"sorting";s:2:"no";}}}

@@ -1,0 +1,30 @@
+title = "post"
+url = "/post"
+layout = "default"
+is_hidden = 0
+==
+<?php 
+
+function onStart()
+{
+    $this['hello'] = "Hello world!";
+	$this['post'] = Input::all();
+}
+
+?>
+==
+<div class="container">
+
+    <h1>This is a form </h1>
+
+	{{ d(post['var1']) }}
+	
+	{{ form_open() }}
+    
+	<input type="text" name="var1">
+	
+	
+	<button type='submit' class='btn btn-primary'> Submit </button>
+    {{ form_close() }}
+
+</div>

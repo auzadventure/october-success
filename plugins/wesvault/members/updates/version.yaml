@@ -1,0 +1,5 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table wesvault_members_'
+    - builder_table_create_wesvault_members_.php

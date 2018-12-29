@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'wesvault.members::lang.plugin.name'
+        type: text
+        searchable: true
+        sortable: true

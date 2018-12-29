@@ -1,0 +1,12 @@
+title: Members
+modelClass: Wesvault\Members\Models\Member
+list: $/wesvault/members/models/member/columns.yaml
+recordUrl: 'wesvault/members/members/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

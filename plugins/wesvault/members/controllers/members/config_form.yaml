@@ -1,0 +1,11 @@
+name: Members
+modelClass: Wesvault\Members\Models\Member
+form: $/wesvault/members/models/member/fields.yaml
+defaultRedirect: wesvault/members/members
+create:
+    redirect: 'wesvault/members/members/update/:id'
+    redirectClose: wesvault/members/members
+update:
+    redirect: wesvault/members/members
+    redirectClose: wesvault/members/members
+preview: {  }

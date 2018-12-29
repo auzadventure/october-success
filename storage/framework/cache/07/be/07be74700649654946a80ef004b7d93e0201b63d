@@ -1,0 +1,50 @@
+1546065826a:1:{s:8:"post.htm";a:9:{s:8:"fileName";s:8:"post.htm";s:7:"content";s:436:"title = "post"
+url = "/post"
+layout = "default"
+is_hidden = 0
+==
+<?php 
+
+function onStart()
+{
+    $this['hello'] = "Hello world!";
+	$this['post'] = Input::all();
+}
+
+?>
+==
+<div class="container">
+
+    <h1>This is a form </h1>
+
+	{{ d(post['var1']) }}
+	
+	{{ form_open() }}
+    
+	<input type="text" name="var1">
+	
+	
+	<button type='submit' class='btn btn-primary'> Submit </button>
+    {{ form_close() }}
+
+</div>";s:5:"mtime";i:1544892305;s:6:"markup";s:250:"<div class="container">
+
+    <h1>This is a form </h1>
+
+	{{ d(post['var1']) }}
+	
+	{{ form_open() }}
+    
+	<input type="text" name="var1">
+	
+	
+	<button type='submit' class='btn btn-primary'> Submit </button>
+    {{ form_close() }}
+
+</div>";s:4:"code";s:99:" 
+
+function onStart()
+{
+    $this['hello'] = "Hello world!";
+	$this['post'] = Input::all();
+}";s:5:"title";s:4:"post";s:3:"url";s:5:"/post";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

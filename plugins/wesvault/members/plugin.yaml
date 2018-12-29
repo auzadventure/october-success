@@ -1,0 +1,22 @@
+plugin:
+    name: 'wesvault.members::lang.plugin.name'
+    description: 'wesvault.members::lang.plugin.description'
+    author: wesvault
+    icon: oc-icon-users
+    homepage: ''
+navigation:
+    member:
+        label: 'wesvault.members::lang.plugin.name'
+        url: wesvault/members/members
+        icon: icon-users
+        permissions:
+            - manage_member
+        sideMenu:
+            members:
+                label: 'wesvault.members::lang.plugin.name'
+                url: wesvault/members/members
+                icon: icon-sitemap
+permissions:
+    manage_member:
+        tab: 'wesvault.members::lang.plugin.name'
+        label: 'wesvault.members::lang.member.manage_member'
